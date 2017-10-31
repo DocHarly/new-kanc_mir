@@ -1,0 +1,494 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	background-color: rgb(243, 242, 242)
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+  /*/////////////////////
+ ////// MAIN MENU //////
+/////////////////////*/
+
+.header
+	margin-top: 20px
+	.logo
+		width: 100%
+	.h-phone
+		margin: 20px 0 0 0
+		font-size: 24px
+	.h-time
+		margin: 0
+	.h-heading
+		margin: 0 100px
+		font-size: 36px
+	.h-group-search
+		position: relative
+		.h-search
+			margin: 30px 10%
+			width: 80%
+			height: 40px
+			text-align: center
+			border: 2px solid #3d3d3d
+			&:hover
+				border: 1px solid $accent
+			&:focus
+				border: 1px solid $accent
+			&-btn
+				position: absolute
+				top: 36px
+				left: 85%
+	.registration
+		display: block
+		font-size: 22px
+		font-weight: bold
+		text-decoration: none
+		margin: 20px
+		.fa
+			margin-right: 5px
+	.basket
+		display: block
+		font-weight: bold
+		text-decoration: none
+		margin: 40px 0 0 50px
+		.fa
+			font-size: 60px
+
+	.main-menu
+		background-color: #3d3d3d
+		margin: 20px 0
+		&-list
+			text-align: center
+			margin: 0
+			padding: 0
+			li
+				display: inline-block
+				padding: 10px 1.5%
+				font-size: 18px
+				&:hover
+					background-color: #595959
+				&:active
+					background-color: #595959
+				a
+					color: #fff
+					text-decoration: none
+					.fa
+						margin-right: 10px
+						font-size: 21px
+			.main-submenu
+				position: relative
+				&:hover
+					.main-submenu-list
+						left: auto
+				&-list
+					position: absolute
+					text-align: left
+					top: 49px
+					left: -9999px
+					z-index: 100
+					&-group
+						padding: 0
+						&-sale
+							padding: 0
+							li
+								background-color: #3d3d3d
+								padding: 0
+								float: left
+								width: 100%
+								a
+									font-size: 14px
+									img
+										height: 80px
+										width: 80px
+										padding: 10px
+									p
+										display: inline-block
+										text-align: center
+										margin: 0
+										width: 70%
+								&:hover
+									background-color: #595959
+						li
+							background-color: #3d3d3d
+							padding: 0
+							float: left
+							width: 33.33%
+							a
+								font-size: 14px
+								img
+									height: 80px
+									width: 80px
+									padding: 10px
+								p
+									display: inline-block
+									text-align: center
+									margin: 0
+									width: 70%
+							&:hover
+								background-color: #595959
+
+
+  /*/////////////////////////
+ ////// END MAIN MENU //////
+/////////////////////////*/
+
+.s
+	&-sale
+		.carousel-sale
+			padding: 25px 0 0 0
+			&-foto
+				background-size: cover
+				background-position: center
+				height: 420px
+			&-description
+				position: absolute
+				right: 0
+				top: 0
+				background-color: $accent
+				color: #fff
+				font-family: roboto, bold
+				p
+					text-align: center
+					padding: 20px 40px 0 40px
+					font-size: 24px
+					margin: 0
+				span
+					display: block
+					text-align: right
+					padding: 10px 40px
+			.owl-dots
+				width: 100%
+				text-align: center
+				margin-top: 30px
+				.owl-dot
+					width: 12px
+					height: 12px
+					background-color: #fff
+					border: 1px solid $accent
+					border-radius: 0em
+					display: inline-block
+					margin: 5px
+					transition: background-color .5s ease, transform .5s ease
+					&.active
+						background-color: $accent
+						transform: scale(1.3)
+
+  /*//////////////////
+ ////// FOOTER //////
+//////////////////*/
+
+.footer
+	padding: 0
+	background-color: #595959
+	.subs
+		background-color: #3d3d3d
+		color: #fff
+		h2
+			display: inline-block
+			margin: 20px 0
+			padding-left: 20px
+		&-group
+			position: relative
+			display: inline-block
+			float: right
+			margin: 20px 0
+			padding-right: 20px
+			input
+				width: 600px
+			button
+				position: absolute
+				right: 20px
+				top: 0
+				background-color: $accent
+	&-group
+		h4
+			font-size: 18px
+			color: #a9a8a8
+		ul
+			list-style-type: none
+			margin: 0
+			padding: 0
+			color: #fff
+			a
+				text-decoration: none
+				color: #fff
+				&:hover
+					color: #a9a8a8
+			.fa
+				font-size: 26px
+		.social
+			.fa
+				font-size: 26px
+				color: #fff
+				padding: 0 20px
+				&:hover
+					color: #a9a8a8
+
+    /*//////////////////////
+   ////// END FOOTER //////
+	////////////////////////
+ //////   PRODUCT  //////
+//////////////////////*/
+
+.s-products
+	.products
+		list-style: none
+		margin: 0 -20px 0 0
+		padding: 0
+		.product-wrapper
+			display: block
+			width: 25%
+			float: left
+			transition: width .2s
+			.product
+				display: block
+				border: 1px solid $accent
+				border-radius: 3px
+				position: relative
+				background: #fff
+				margin: 0 20px 20px 0
+				text-decoration: none
+				color: #474747
+				z-index: 0
+				&:hover
+					z-index: 1
+					.product-photo
+						img
+							transform: scale(1.05)
+						.product-preview
+							transform: translateY(0)
+							opacity: 1
+					.product-details-buttons
+						opacity: 1
+						transform: scale(1)
+						visibility: visible
+				&-photo
+					position: relative
+					padding-bottom: 100%
+					overflow: hidden
+					.product-preview
+						position: absolute
+						bottom: 20px
+						left: 20px
+						right: 20px
+						margin: auto
+						display: inline-block
+						transition: opacity, transform .2s ease-out
+						transform: translateY(2em)
+						opacity: 0
+					.sticker
+						z-index: 3
+						width: 60px
+						height: 60px
+						position: absolute
+						top: 10px
+						left: 10px
+					.product-item
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0
+						right: 0
+						max-width: 100%
+						max-height: 100%
+						margin: auto
+						transition: transform .4s ease-out
+				&-text
+					padding: 5px 20px
+					&-name
+						font-size: 1.4em
+						color: $accent
+						margin: 0 0 .1em
+					p
+						position: relative
+						margin: 0
+						font-size: 1em
+						line-height: 1.4em
+						height: 5.6em
+						overflow: hidden
+						&::after
+							content: ''
+							display: inline-block
+							position: absolute
+							bottom: 0
+							right: 0
+							width: 4.2em
+							height: 1.6em
+							background: linear-gradient(to left top, #fff, rgba(255, 255, 255, 0))
+					.product-icons
+						line-height: 35px
+						position: absolute
+						top: 20px
+						right: 20px
+						&-item
+							margin-bottom: 10px
+							white-space: nowrap
+							.fa
+								display: inline-block
+								background-color: #f5f5f5
+								width: 35px
+								height: 35px
+								font-size: 1.2em
+								text-align: center
+								padding-top: 8px
+								border-radius: 50%
+								box-shadow: 1px 1px 7px rgba(0, 0, 0, .3)
+							&-text
+								display: none
+								margin-left: 5px
+				.product-details
+					padding: 0 20px 20px
+					&-availability
+						color: $accent
+						font-size: .9em
+						margin-bottom: 1.5em
+						.fa
+							margin-right: .3em
+					&-price
+						font-size: 1.3em
+						&-old
+							font-size: 1em
+							text-decoration: line-through
+							margin-right: .5em
+							color: #ff3535
+							b, small
+								color: #888
+					&-buttons
+						position: absolute
+						top: 0
+						left: -1px
+						right: -1px
+						bottom: 0
+						visibility: hidden
+						opacity: 0
+						transform: scaleY(.8)
+						transform-origin: top
+						transition: transform .2s ease-out
+						z-index: -1
+						backface-visibility: hidden
+						&::before
+							content: ''
+							float: left
+							height: 100%
+							width: 100%
+						.buttons
+							position: relative
+							top: -1px
+							padding: 20px
+							background: #fff
+							transition: .2s ease-out
+							border: 1px solid $accent
+							border-radius: 3px
+				.button
+					display: inline-block
+					width: 100%
+					background: #943cbc
+					color: #fff
+					text-align: center
+					border: 0
+					padding: 10px 0
+					border-radius: 20px
+					text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)
+					box-shadow: 1px 1px 10px rgba(0, 0, 0, .4)
+					cursor: pointer
+				.to-cart
+					background: $accent
+					margin-bottom: 1em
+					.fa
+						font-size: 1.1em
+						margin-right: .4em
+
+    /*///////////////////////
+   ////// END PRODUCT //////
+	/////////////////////////
+ ////   COMPILATIONS  ////
+///////////////////////*/
+
+.s-compilation
+	.compilation-group
+		height: 440px
+		.compil-a
+			height: 420px
+			overflow: hidden
+			box-shadow: 0 0 10px rgba(0,0,0,0.5)
+			margin-bottom: 20px
+			&:hover
+				opacity: 0.8
+			img
+				width: 100%
+				height: 100%
+			span
+				position: absolute
+				padding: 20px 25px
+				font-size: 16px
+				font-weight: bold
+				color: #fff
+				background-color: $accent
+		.compil-b
+			height: 200px
+			overflow: hidden
+			box-shadow: 0 0 10px rgba(0,0,0,0.5)
+			margin-bottom: 20px
+			&:hover
+				opacity: 0.8
+			img
+				width: 100%
+				height: 100%
+			span
+				position: absolute
+				padding: 20px 25px
+				font-size: 16px
+				font-weight: bold
+				color: #fff
+				background-color: $accent
+
+@import "media" // Всегда в конце
