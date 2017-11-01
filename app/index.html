@@ -30,6 +30,29 @@
 
 <body class="is_home">
 
+	<div id="modal_form" class="modal_form">
+		<span id="modal_close" class="modal_close"><i class="fa fa-close"></i></span>
+		<form id="form" class="registration-form">
+			<h4 class="text-center">Регистрация</h4>
+			<input type="text" placeholder="Логин"/>
+			<input type="password" placeholder="Пароль"/>
+			<input type="text" placeholder="E-mail"/>
+			<button class="button">Создать</button>
+			<p class="message">Уже зарегестрированы?<a href="#form2" id="go_login">Войти</a></p>
+		</form>
+	</div>
+	<div id="modal_form_2" class="modal_form_2">
+		<span id="modal_close_2" class="modal_close_2"><i class="fa fa-close"></i></span>
+		<form id="form2" class="login-form">
+			<h4>Войдите в систему</h4>
+			<input type="text" placeholder="Логин"/>
+			<input type="password" placeholder="Пароль"/>
+			<button class="button">Войти</button>
+			<p class="message">Не зарегестрированы? <a href="#form" id="go">Создать аккаунт</a></p>
+		</form>
+	</div>
+	<div id="overlay" class="overlay"></div>
+
 	<!--
 	////////////////////////
 	////// MAIN MENU //////
@@ -56,13 +79,13 @@
 				</div>
 
 				<div class="col-sm-3">
-					<a href="#form" class="registration"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Вход/регистрация</a>
+					<a href="#form" id="go" class="registration"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Вход/регистрация</a>
 					<a href="order.html" class="basket"><i class="fa fa-shopping-basket" aria-hidden="true"></i>1 235 руб</a>
 				</div>
 
 				<div class="col-sm-12 main-menu">
 					<ul class="navbar main-menu-list">
-						<li class="main-submenu"><a href="#"><i class="fa fa-bars" aria-hidden="true"></i>Каталог товаров</a>
+						<li class="main-submenu"><a href="category.html"><i class="fa fa-bars" aria-hidden="true"></i>Каталог товаров</a>
 							<ul class="main-submenu-list">
 								<div class="container">
 									<div class="row">
